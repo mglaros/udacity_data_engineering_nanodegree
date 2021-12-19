@@ -1,2 +1,4 @@
 apache-cassandra-4.0.1/*
 venv/*
+.DS_STORE
+.ipynb_checkpoints
