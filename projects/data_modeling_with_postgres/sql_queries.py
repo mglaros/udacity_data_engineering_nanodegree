@@ -100,6 +100,7 @@ songplay_table_insert = ("""
 """)
 
 user_table_insert = ("""
+    
     INSERT INTO users 
     (
         user_id, 
@@ -111,9 +112,11 @@ user_table_insert = ("""
     VALUES (%s, %s, %s, %s, %s)
     ON CONFLICT (user_id) DO UPDATE
     SET level = EXCLUDED.level;
+
 """)
 
 song_table_insert = ("""
+
     INSERT INTO songs 
     (
         song_id,
@@ -124,9 +127,11 @@ song_table_insert = ("""
     )
     VALUES (%s, %s, %s, %s, %s)
     ON CONFLICT (song_id) DO NOTHING;
+
 """)
 
 artist_table_insert = ("""
+
     INSERT INTO artists 
     (
         artist_id, 
@@ -137,10 +142,12 @@ artist_table_insert = ("""
     )
     VALUES (%s, %s, %s, %s, %s)
     ON CONFLICT (artist_id) DO NOTHING;
+
 """)
 
 
 time_table_insert = ("""
+
     INSERT INTO time 
     (
         start_time, 
@@ -153,6 +160,7 @@ time_table_insert = ("""
     )
     VALUES (%s, %s, %s, %s, %s, %s, %s)
     ON CONFLICT(start_time) DO NOTHING;
+    
 """)
 
 # FIND SONGS
