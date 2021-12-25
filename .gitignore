@@ -4,3 +4,4 @@ venv/*
 */.DS_STORE/*
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+dwh.cfg
